@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: heroku
-# Recipe:: install
+# Recipe:: default
 #
 
 # Create binary heroku and add bin to PATH

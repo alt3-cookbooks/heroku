@@ -9,7 +9,7 @@ Installs Heroku using one of the Heroku provided installation methods:
 
 ##Recipes
 
-###heroku::install
+###heroku::default
 
 Installs heroku and adds binary to user's PATH.
 
@@ -23,7 +23,7 @@ Installs heroku and adds binary to user's PATH.
   </tr>
   <tr>
     <td><code>node[:heroku][:installation_method]</code></td>
-    <td>Installation method as made available by Heroku  (standalone/debian)).</td>
+    <td>Installation method as made available by Heroku  (standalone/debian).</td>
     <td><em>standalone</em></td>
   </tr>
 </table>
