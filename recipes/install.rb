@@ -5,7 +5,7 @@
 include_recipe 'ark::default'
 
 # Create binary heroku and add bin to PATH
-ark "Heroku standalone" do
+ark "heroku" do
   url node.heroku[:client_url]
   path node.heroku[:installation_path]
   creates 'heroku'
