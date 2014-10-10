@@ -1,2 +1,2 @@
 
-default[:heroku][:installation_method] = 'apt-toolbelt'
+default[:heroku][:installation_method] = 'apt_toolbelt'

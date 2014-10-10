@@ -1,4 +1,4 @@
 #
 # Cookbook Name:: heroku
-# Recipe:: apt-toolbelt
+# Recipe:: apt_toolbelt
 #
