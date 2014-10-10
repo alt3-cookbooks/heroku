@@ -2,16 +2,17 @@
 
 [![Build Status](https://travis-ci.org/alt3-cookbooks/heroku.svg)](https://travis-ci.org/alt3-cookbooks/heroku)
 
-Installs Heroku using one of the Heroku provided installation methods:
+Installs Heroku using one of the following methods:
 
 - [standalone](https://toolbelt.heroku.com/standalone)
-- [debian](https://toolbelt.heroku.com/debian) (installs heroku, git and [Foreman](https://github.com/ddollar/foreman))
+- [apt-toolbelt](https://toolbelt.heroku.com/debian)
+- [gem](https://rubygems.org/gems/heroku)
 
 ##Recipes
 
 ###heroku::default
 
-Installs heroku and adds binary to user's PATH.
+Conditionally includes the requested installation method.
 
 ####Attributes
 
@@ -23,7 +24,14 @@ Installs heroku and adds binary to user's PATH.
   </tr>
   <tr>
     <td><code>node[:heroku][:installation_method]</code></td>
-    <td>Installation method as made available by Heroku  (standalone/debian).</td>
-    <td><em>standalone</em></td>
+    <td>Installation method to use (standalone, apt-toolbelt, gem).</td>
+    <td><em>apt-toolbelt</em></td>
   </tr>
 </table>
+
+##heroku::apt-toolbelt
+
+Downloads binary from heroku.com and adds it to to the user's PATH.
+
+
+##heroku::gem
