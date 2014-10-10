@@ -1,6 +1,6 @@
 #
 # Cookbook Name:: heroku
-# Recipe:: default
+# Recipe:: standalone
 #
 include_recipe 'ark::default'
 
@@ -11,4 +11,5 @@ ark "heroku" do
   creates 'heroku'
   append_env_path true
   action :install
+  not_if { ::File.exists?("#{node[:heroku][:target_path]}/heroku")}
 end
