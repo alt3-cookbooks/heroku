@@ -12,7 +12,7 @@
 
 apt_repository 'heroku' do
   uri        'http://toolbelt.heroku.com/ubuntu'
-  components ['main']
+  components ['stable']
   key        'https://toolbelt.heroku.com/apt/release.key'
 end
 
