@@ -12,7 +12,7 @@
 #  apt-get install -y heroku-toolbelt
 
 # Add heroku source list to apt
-template '/etc/apt-cacher-ng/acng.conf' do
+template '/etc/apt/sources.list.d/heroku.list' do
   source 'heroku.list.erb'
   notifies :run, 'execute[apt-get update]', :immediately
 end
