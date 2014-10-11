@@ -8,6 +8,14 @@ Installs Heroku using one of the following installation types:
 - [toolbelt](https://toolbelt.heroku.com/debian)
 - [gem](https://rubygems.org/gems/heroku)
 
+# Attributes
+
+- `node[:heroku][:preferred_install]` - Specifies installation method (defaults to toolbelt)
+- `node[:heroku][:standalone][:source_url]` - URL to heroku binary.
+- `node[:heroku][:toolbelt][:apt_repo]` - URL to heroku apt repository
+- `node[:heroku][:toolbelt][:apt_key]` - URL to apt key source
+- `node[:heroku][:toolbelt][:apt_key_id]` - Key id of the apt key source
+
 # Recipes
 
 ## heroku::default
@@ -26,12 +34,6 @@ Chef apt toolbelt installation (not using Heroku's install-ubuntu.sh script).
 
 @todo
 
-# Attributes
 
-- `node[:heroku][:preferred_install]` - Specifies how to install heroku (defaults to toolbelt)
-- `node[:heroku][:standalone][:source_url]` - Change if you want to use a different heroku binary.
-- `node[:heroku][:toolbelt][:apt_repo]` - Heroku apt repository url
-- `node[:heroku][:toolbelt][:apt_key]` - URL to apt key source
-- `node[:heroku][:toolbelt][:apt_key_id]` - Key id of the apt key source
 
 

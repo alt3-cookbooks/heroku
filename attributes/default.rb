@@ -1,6 +1,6 @@
 
 # Globals
-default[:heroku][:install_type]             = 'toolbelt'
+default[:heroku][:preferred_install]        = 'toolbelt'
 default[:heroku][:bin_dir]                  = '/usr/local/heroku/bin'
 
 # Heroku standalone binary
