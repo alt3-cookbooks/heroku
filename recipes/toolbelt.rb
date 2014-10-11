@@ -12,8 +12,9 @@
 #  apt-get install -y heroku-toolbelt
 
 # Add heroku source list to apt
-template '/etc/apt/sources.list.d/heroku.list' do
+template node[:heroku][:toolbelt][:source_list] do
   source 'heroku.list.erb'
   notifies :run, 'execute[apt-get update]', :immediately
+  not_if { ::File.exists?(node[:heroku][:toolbelt][:source_list]) }
 end
 
