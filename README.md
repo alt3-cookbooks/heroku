@@ -12,30 +12,26 @@ Installs Heroku using one of the following installation types:
 
 ## heroku::default
 
-Convenience recipe to conditionally include the needed installation recipe.
-
-### Attributes
-
-- `node[:heroku][:preferred_install]` - Specifies how to install heroku (defaults to toolbelt)
+Convenience recipe to include the preferred installation method using `node[:heroku][:preferred_install]`.
 
 ## heroku::standalone
 
-Downloads binary from heroku.com and adds it to to the user's PATH.
-
-### Attributes
-
-- `node[:heroku][:standalone][:source_url]` - Change if you want to use a different heroku binary.
+Downloads binary from heroku.com and adds it to the user's PATH.
 
 ## heroku::toolbelt
 
-Proper Chef apt toolbelt installation (not using Heroku's install-ubuntu.sh script).
+Chef apt toolbelt installation (not using Heroku's install-ubuntu.sh script).
 
-### Attributes
+##heroku::gem
 
+@todo
+
+# Attributes
+
+- `node[:heroku][:preferred_install]` - Specifies how to install heroku (defaults to toolbelt)
+- `node[:heroku][:standalone][:source_url]` - Change if you want to use a different heroku binary.
 - `node[:heroku][:toolbelt][:apt_repo]` - Heroku apt repository url
 - `node[:heroku][:toolbelt][:apt_key]` - URL to apt key source
 - `node[:heroku][:toolbelt][:apt_key_id]` - Key id of the apt key source
 
-##heroku::gem
 
-Todo
