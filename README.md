@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/alt3-cookbooks/heroku.svg)](https://travis-ci.org/alt3-cookbooks/heroku)
 
-Installs Heroku using one of the following methods:
+Installs Heroku using one of the following installation types:
 
 - [standalone](https://toolbelt.heroku.com/standalone)
 - [toolbelt](https://toolbelt.heroku.com/debian)
@@ -23,7 +23,7 @@ Convenience recipe to conditionally include the needed installation recipe.
     <td>Default</td>
   </tr>
   <tr>
-    <td><code>node[:heroku][:installation_method]</code></td>
+    <td><code>node[:heroku][:install_type]</code></td>
     <td>Installation method to use (standalone, toolbelt, gem).</td>
     <td><em>toolbelt</em></td>
   </tr>
@@ -35,7 +35,7 @@ Downloads binary from heroku.com and adds it to to the user's PATH.
 
 #heroku::toolbelt
 
-Todo
+Apt installation of package heroku-toolbelt (not using Heroku's install-ubuntu.sh script).
 
 ##heroku::gem
 
