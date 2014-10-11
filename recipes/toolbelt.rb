@@ -3,18 +3,16 @@
 # Recipe:: toolbelt
 #
 # Description:
-# Installs Heroku toolbelt the Chef way using apt as pr
-#
-
-#  echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
-#  wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
-#  apt-get update
-#  apt-get install -y heroku-toolbelt
+# Chef translated installation of Heroku's install-ubuntu.sh:
+#      echo "deb http://toolbelt.heroku.com/ubuntu ./" > /etc/apt/sources.list.d/heroku.list
+#      wget -O- https://toolbelt.heroku.com/apt/release.key | apt-key add -
+#      apt-get update
+#      apt-get install -y heroku-toolbelt
 
 
 apt_repository 'heroku' do
   uri        'http://toolbelt.heroku.com/ubuntu'
-  components ['main', 'stable']
+#  components ['main', 'stable']
   key        'https://toolbelt.heroku.com/apt/release.key'
 end
 
