@@ -35,7 +35,30 @@ Downloads binary from heroku.com and adds it to to the user's PATH.
 
 #heroku::toolbelt
 
-Apt installation of package heroku-toolbelt (not using Heroku's install-ubuntu.sh script).
+Proper Chef apt toolbelt installation (not using Heroku's install-ubuntu.sh script).
+
+<table>
+  <tr>
+    <td>Attribute</td>
+    <td>Description</td>
+    <td>Default</td>
+  </tr>
+  <tr>
+    <td><code>node[:heroku][:toolbelt][:apt_repo]</code></td>
+    <td>Apt repo source url</td>
+    <td><em>http://toolbelt.heroku.com/ubuntu</em></td>
+  </tr>
+  <tr>
+    <td><code>node[:heroku][:toolbelt][:apt_key]</code></td>
+    <td>Apt key source url</td>
+    <td><em>https://toolbelt.heroku.com/apt/release.key</em></td>
+  </tr>
+  <tr>
+    <td><code>node[:heroku][:toolbelt][:apt_key_id]</code></td>
+    <td>Key id for the heroku apt key</td>
+    <td><em>0F1B0520</em></td>
+  </tr>
+</table>
 
 ##heroku::gem
 
