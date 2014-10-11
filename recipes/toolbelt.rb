@@ -11,12 +11,18 @@
 
 # Add heroku to apt sources
 apt_repository 'heroku' do
-  uri        'http://toolbelt.heroku.com/ubuntu'
-  components ['./']
-  key        'https://toolbelt.heroku.com/apt/release.key'
+  uri node[:heroku][:toolbelt][:apt_repo]
+  key node[:heroku][:toolbelt][:apt_key]
+  components node[:heroku][:toolbelt][:components]
+  distribution node[:heroku][:toolbelt][:distribution]
 end
 
 # Install heroku-toolbelt packages
-#package 'heroku-toolbelt' do
-#  action :install
+package 'heroku-toolbelt' do
+  action :install
+end
+
+# Add heroku bindir to PATH
+#file "/etc/profile.d/heroku.sh" do
+#  content "PATH=$PATH:#{node[:heroku][:bin_dir]}"
 #end
